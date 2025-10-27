@@ -59,6 +59,12 @@ body{
   font-size:40px;font-weight:800;letter-spacing:.2px;
   text-shadow:0 2px 14px rgba(0,0,0,.35);
 }
+section[aria-label="Baby Name"] .card-value{
+  font-size: clamp(18px, 3.2vw, 28px); /* scales down on small screens */
+  line-height: 1.1;
+  word-break: break-word;              /* allows wrap on hyphenated/long words */
+  text-wrap: balance;                  /* nicer multi-line wrapping (modern browsers) */
+}
 .card-spark{
   position:absolute;left:0;right:0;bottom:0;height:64px;
   background:linear-gradient(0deg, rgba(0,0,0,.22), transparent);
