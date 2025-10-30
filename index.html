@@ -58,16 +58,28 @@ body{
 .card.explode .sparkline{overflow:visible;}
 .card.explode .spark-stroke{stroke-width:3;filter:drop-shadow(0 0 8px rgba(255,255,255,0.8))}
 @keyframes fall1{
-  0%{transform:translate(0,0) rotate(0deg);opacity:0.8;}
-  100%{transform:translate(-5px,60px) rotate(180deg);opacity:0;}
+  0%{transform:translate(0,0) rotate(0deg);opacity:1;}
+  100%{transform:translate(0,70px) rotate(180deg);opacity:0;}
 }
 @keyframes fall2{
-  0%{transform:translate(0,0) rotate(0deg);opacity:0.7;}
-  100%{transform:translate(3px,70px) rotate(220deg);opacity:0;}
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.95;}
+  100%{transform:translate(0,65px) rotate(220deg);opacity:0;}
 }
 @keyframes fall3{
-  0%{transform:translate(0,0) rotate(0deg);opacity:0.6;}
-  100%{transform:translate(-8px,80px) rotate(270deg);opacity:0;}
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.9;}
+  100%{transform:translate(0,80px) rotate(270deg);opacity:0;}
+}
+@keyframes fall4{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.95;}
+  100%{transform:translate(0,60px) rotate(300deg);opacity:0;}
+}
+@keyframes fall5{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.85;}
+  100%{transform:translate(0,75px) rotate(150deg);opacity:0;}
+}
+@keyframes fall6{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.9;}
+  100%{transform:translate(0,55px) rotate(200deg);opacity:0;}
 }
 .card-title{font-size:14px;color:#ecf3f8;opacity:.92}
 .card-value{line-height:1.1;white-space:normal;overflow-wrap:anywhere;
@@ -164,11 +176,19 @@ svg.sparkline{width:100%;height:56px;display:block;}
           </defs>
           <path class="spark-fill" d="M 8.0 50.0 L 26.0 49.5 L 44.0 49.0 L 62.0 48.8 L 80.0 48.5 L 98.0 48.0 L 116.0 47.0 L 134.0 46.0 L 152.0 44.0 L 170.0 40.0 L 188.0 35.0 L 206.0 25.0 L 224.0 10.0 L 242.0 -10.0 L 250.0 -35.0 L 260 -80.0 L 260 56 L 0 56 Z"></path>
           <path class="spark-stroke" d="M 8.0 50.0 L 26.0 49.5 L 44.0 49.0 L 62.0 48.8 L 80.0 48.5 L 98.0 48.0 L 116.0 47.0 L 134.0 46.0 L 152.0 44.0 L 170.0 40.0 L 188.0 35.0 L 206.0 25.0 L 224.0 10.0 L 242.0 -10.0 L 250.0 -35.0 L 260 -80.0" marker-end="url(#arrowhead)"></path>
-          <!-- Falling shards -->
-          <polygon points="245 -5, 250 -2, 248 3, 243 0" fill="rgba(255,255,255,0.4)" opacity="0.8" style="animation: fall1 2s infinite ease-in;" />
-          <polygon points="255 -15, 258 -12, 257 -8, 253 -10" fill="rgba(255,255,255,0.5)" opacity="0.7" style="animation: fall2 2.5s infinite ease-in;" />
-          <polygon points="250 -25, 254 -22, 252 -18, 248 -21" fill="rgba(255,255,255,0.35)" opacity="0.6" style="animation: fall3 3s infinite ease-in;" />
-          <polygon points="240 -8, 242 -4, 239 -2, 237 -6" fill="rgba(255,255,255,0.45)" opacity="0.75" style="animation: fall1 2.8s infinite ease-in;" />
+          <!-- Falling stars -->
+          <polygon points="247 -5, 248 -2, 251 -2, 249 0, 250 3, 247 1, 244 3, 245 0, 243 -2, 246 -2" fill="rgba(255,255,255,0.7)" style="animation: fall1 1.8s infinite ease-in;" />
+          <polygon points="256 -15, 257 -12, 260 -12, 258 -10, 259 -7, 256 -9, 253 -7, 254 -10, 252 -12, 255 -12" fill="rgba(255,255,255,0.8)" style="animation: fall2 2s infinite ease-in;" />
+          <polygon points="251 -25, 252 -21, 256 -21, 253 -19, 254 -15, 251 -17, 248 -15, 249 -19, 246 -21, 250 -21" fill="rgba(255,255,255,0.65)" style="animation: fall3 2.3s infinite ease-in;" />
+          <polygon points="253 -12, 254 -9, 257 -9, 255 -7, 256 -4, 253 -6, 250 -4, 251 -7, 249 -9, 252 -9" fill="rgba(255,255,255,0.85)" style="animation: fall4 1.9s infinite ease-in;" />
+          <polygon points="248.5 -18, 249.3 -15.5, 251.5 -15.5, 250 -14, 250.5 -11.5, 248.5 -13, 246.5 -11.5, 247 -14, 245.5 -15.5, 247.7 -15.5" fill="rgba(255,255,255,0.7)" style="animation: fall5 2.4s infinite ease-in;" />
+          <polygon points="244 -20, 245 -17, 248 -17, 246 -15, 247 -12, 244 -14, 241 -12, 242 -15, 240 -17, 243 -17" fill="rgba(255,255,255,0.8)" style="animation: fall6 2.1s infinite ease-in;" />
+          <polygon points="259 -22, 260 -19, 263 -19, 261 -17, 262 -14, 259 -16, 256 -14, 257 -17, 255 -19, 258 -19" fill="rgba(255,255,255,0.75)" style="animation: fall2 2.6s infinite ease-in;" />
+          <polygon points="247 -30, 248 -26, 252 -26, 249 -24, 250 -20, 247 -22, 244 -20, 245 -24, 242 -26, 246 -26" fill="rgba(255,255,255,0.65)" style="animation: fall3 2.8s infinite ease-in;" />
+          <polygon points="242.5 -16, 243.3 -13.5, 245.5 -13.5, 244 -12, 244.5 -9.5, 242.5 -11, 240.5 -9.5, 241 -12, 239.5 -13.5, 241.7 -13.5" fill="rgba(255,255,255,0.85)" style="animation: fall5 1.7s infinite ease-in;" />
+          <polygon points="257 -35, 258 -31, 262 -31, 259 -29, 260 -25, 257 -27, 254 -25, 255 -29, 252 -31, 256 -31" fill="rgba(255,255,255,0.7)" style="animation: fall6 2.7s infinite ease-in;" />
+          <polygon points="252 -40, 253 -36, 257 -36, 254 -34, 255 -30, 252 -32, 249 -30, 250 -34, 247 -36, 251 -36" fill="rgba(255,255,255,0.75)" style="animation: fall2 3s infinite ease-in;" />
+          <polygon points="255 -10, 255.8 -7.5, 258 -7.5, 256.5 -6, 257 -3.5, 255 -5, 253 -3.5, 253.5 -6, 252 -7.5, 254.2 -7.5" fill="rgba(255,255,255,0.8)" style="animation: fall4 1.9s infinite ease-in;" />
         </svg>
       </div>
     </section>
