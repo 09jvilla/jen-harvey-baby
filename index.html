@@ -53,6 +53,22 @@ body{
   padding:12px;
 }
 .card.purple{background:linear-gradient(135deg,#1e88f7,#a855f7)}
+.card.explode{overflow:visible;z-index:10;}
+.card.explode .card-spark{overflow:visible;}
+.card.explode .sparkline{overflow:visible;}
+.card.explode .spark-stroke{stroke-width:3;filter:drop-shadow(0 0 8px rgba(255,255,255,0.8))}
+@keyframes fall1{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.8;}
+  100%{transform:translate(-5px,60px) rotate(180deg);opacity:0;}
+}
+@keyframes fall2{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.7;}
+  100%{transform:translate(3px,70px) rotate(220deg);opacity:0;}
+}
+@keyframes fall3{
+  0%{transform:translate(0,0) rotate(0deg);opacity:0.6;}
+  100%{transform:translate(-8px,80px) rotate(270deg);opacity:0;}
+}
 .card-title{font-size:14px;color:#ecf3f8;opacity:.92}
 .card-value{line-height:1.1;white-space:normal;overflow-wrap:anywhere;
   margin-top:10px;
@@ -135,7 +151,28 @@ svg.sparkline{width:100%;height:56px;display:block;}
         </svg>
       </div>
     </section>
-    
+
+    <section class="card purple explode" role="img" aria-label="Cuteness Level">
+      <div class="card-title">Cuteness Level</div>
+      <div class="card-value" id="cardValue6">100</div>
+      <div class="card-spark">
+        <svg class="sparkline" viewBox="0 0 260 56" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <polygon points="0 0, 6 3, 0 6" fill="rgba(255,255,255,0.95)" />
+            </marker>
+          </defs>
+          <path class="spark-fill" d="M 8.0 50.0 L 26.0 49.5 L 44.0 49.0 L 62.0 48.8 L 80.0 48.5 L 98.0 48.0 L 116.0 47.0 L 134.0 46.0 L 152.0 44.0 L 170.0 40.0 L 188.0 35.0 L 206.0 25.0 L 224.0 10.0 L 242.0 -10.0 L 250.0 -35.0 L 260 -80.0 L 260 56 L 0 56 Z"></path>
+          <path class="spark-stroke" d="M 8.0 50.0 L 26.0 49.5 L 44.0 49.0 L 62.0 48.8 L 80.0 48.5 L 98.0 48.0 L 116.0 47.0 L 134.0 46.0 L 152.0 44.0 L 170.0 40.0 L 188.0 35.0 L 206.0 25.0 L 224.0 10.0 L 242.0 -10.0 L 250.0 -35.0 L 260 -80.0" marker-end="url(#arrowhead)"></path>
+          <!-- Falling shards -->
+          <polygon points="245 -5, 250 -2, 248 3, 243 0" fill="rgba(255,255,255,0.4)" opacity="0.8" style="animation: fall1 2s infinite ease-in;" />
+          <polygon points="255 -15, 258 -12, 257 -8, 253 -10" fill="rgba(255,255,255,0.5)" opacity="0.7" style="animation: fall2 2.5s infinite ease-in;" />
+          <polygon points="250 -25, 254 -22, 252 -18, 248 -21" fill="rgba(255,255,255,0.35)" opacity="0.6" style="animation: fall3 3s infinite ease-in;" />
+          <polygon points="240 -8, 242 -4, 239 -2, 237 -6" fill="rgba(255,255,255,0.45)" opacity="0.75" style="animation: fall1 2.8s infinite ease-in;" />
+        </svg>
+      </div>
+    </section>
+
   </div>
 
   <div class="footer">
